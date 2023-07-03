@@ -37,6 +37,7 @@ namespace PartialZ.Api.Services
             try
             {
                 bool isverified = false;
+                bool isverifiedExistingMail = false;
                 if (this._PartialZContext.Employees.Where(e => e.Email == emailID).Any())
                 {
                     //update
@@ -47,10 +48,17 @@ namespace PartialZ.Api.Services
                     if (existingdata.IsVerified == 1)
                     {
                         isverified=true;
+                        isverifiedExistingMail = true;
+                    }
+                    else
+                    {
+                        isverified = false;
+                        isverifiedExistingMail = true;
                     }
                 }
                 else
                 {
+
                     //insert
                     var data = new Employee()
                     {
@@ -59,11 +67,15 @@ namespace PartialZ.Api.Services
                     };
                     await this._PartialZContext.Employees.AddAsync(data);
                 }
+                
                 var result= await this._PartialZContext.SaveChangesAsync();
                 //send mail sync
-                if(!isverified)
-                this._mailService.SendVerificationMail(emailID);                
-                return result;
+                if(!isverified && !isverifiedExistingMail)
+                this._mailService.SendVerificationMail(emailID);
+                if (!isverified)
+                    return 2;
+                else
+                    return result;
             }
             catch (Exception ex)
             {

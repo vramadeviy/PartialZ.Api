@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using PartialZ.Api.Dtos;
 using PartialZ.Api.Services.Interfaces;
 using PartialZ.DataAccess.PartialZDB;
+using System.Reflection.Metadata;
 
 namespace PartialZ.Api.Services
 {
@@ -28,13 +30,13 @@ namespace PartialZ.Api.Services
                 }
                 else
                 {
-                    //insert
-                    var data = new Employer()
-                    {
-                        Eannumber = eanNumber,
-                        Feinnumber = feinNumber
-                    };
-                    await this._PartialZContext.Employers.AddAsync(data);
+                        //insert
+                        var data = new Employer()
+                        {
+                            Eannumber = eanNumber,
+                            Feinnumber = feinNumber
+                        };
+                        await this._PartialZContext.Employers.AddAsync(data);
                 }
                 return await this._PartialZContext.SaveChangesAsync();
                 //send mail sync
@@ -44,6 +46,7 @@ namespace PartialZ.Api.Services
                 throw;
             }
         }
+
         public async Task<int> AffidavitRegistration(AffidavitDto affidavitDto)
         {
             try
