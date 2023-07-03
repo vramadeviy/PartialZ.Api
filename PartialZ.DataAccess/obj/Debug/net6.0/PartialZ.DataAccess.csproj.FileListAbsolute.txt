@@ -1,0 +1,14 @@
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\bin\Debug\net6.0\PartialZ.DataAccess.deps.json
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\bin\Debug\net6.0\PartialZ.DataAccess.dll
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\bin\Debug\net6.0\PartialZ.DataAccess.pdb
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.csproj.AssemblyReference.cache
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.AssemblyInfoInputs.cache
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.AssemblyInfo.cs
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.csproj.CoreCompileInputs.cache
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.dll
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\refint\PartialZ.DataAccess.dll
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.pdb
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\ref\PartialZ.DataAccess.dll
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\bin\Debug\net6.0\PartialZ.DataAccess.runtimeconfig.json
+C:\Prasanna\PartialZ.Api\PartialZ.DataAccess\obj\Debug\net6.0\PartialZ.DataAccess.genruntimeconfig.cache
