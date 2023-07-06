@@ -47,7 +47,7 @@ namespace PartialZ.Api.Services
                     existingdata.LastModifedDate = DateTime.UtcNow;
                     if (existingdata.IsVerified == 1)
                     {
-                        isverified=true;
+                        isverified = true;
                         isverifiedExistingMail = true;
                     }
                     else
@@ -67,11 +67,11 @@ namespace PartialZ.Api.Services
                     };
                     await this._PartialZContext.Employees.AddAsync(data);
                 }
-                
-                var result= await this._PartialZContext.SaveChangesAsync();
+
+                var result = await this._PartialZContext.SaveChangesAsync();
                 //send mail sync
-                if(!isverified && !isverifiedExistingMail)
-                this._mailService.SendVerificationMail(emailID);
+                if (!isverified && !isverifiedExistingMail)
+                    this._mailService.SendVerificationMail(emailID);
                 if (!isverified)
                     return 2;
                 else
@@ -116,10 +116,10 @@ namespace PartialZ.Api.Services
                     //update
                     var existingdata = await this._PartialZContext.Employees.Where(e => e.Email == affidavitDto.Email).FirstAsync();
                     existingdata.Email = affidavitDto.Email;
-                    existingdata.FirstName = affidavitDto.FirstName;
-                    existingdata.LastName = affidavitDto.LastName;
+                    existingdata.FirstName = affidavitDto.ContactFirstName;
+                    existingdata.LastName = affidavitDto.ContactLastName;
                     existingdata.BusinessTitle = affidavitDto.BusinessTitle;
-                    existingdata.PhoneNumber = affidavitDto.PhoneNumber;
+                    existingdata.PhoneNumber = affidavitDto.ContactPhone;
                     existingdata.LastModifedDate = DateTime.UtcNow;
                     await this._PartialZContext.SaveChangesAsync();
                     employeeID = existingdata.EmployeeId;
@@ -130,10 +130,10 @@ namespace PartialZ.Api.Services
                     var data = new Employee()
                     {
                         Email = affidavitDto.Email,
-                        FirstName = affidavitDto.FirstName,
-                        LastName = affidavitDto.LastName,
+                        FirstName = affidavitDto.ContactFirstName,
+                        LastName = affidavitDto.ContactLastName,
                         BusinessTitle = affidavitDto.BusinessTitle,
-                        PhoneNumber = affidavitDto.PhoneNumber
+                        PhoneNumber = affidavitDto.ContactPhone
                     };
                     await this._PartialZContext.Employees.AddAsync(data);
                     await this._PartialZContext.SaveChangesAsync();

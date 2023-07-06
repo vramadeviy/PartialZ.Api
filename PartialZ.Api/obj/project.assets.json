@@ -1249,6 +1249,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.8",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.8"
         },
         "compile": {
@@ -3742,6 +3743,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Design >= 7.0.8",
+      "Microsoft.EntityFrameworkCore.Relational >= 7.0.8",
       "Newtonsoft.Json >= 13.0.3",
       "PartialZ.DataAccess >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -3754,11 +3756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.Api\\PartialZ.Api.csproj",
+      "projectUniqueName": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.Api\\PartialZ.Api.csproj",
       "projectName": "PartialZ.Api",
-      "projectPath": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.Api\\PartialZ.Api.csproj",
+      "projectPath": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.Api\\PartialZ.Api.csproj",
       "packagesPath": "C:\\Users\\ramadevi.yekula\\.nuget\\packages\\",
-      "outputPath": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.Api\\obj\\",
+      "outputPath": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3780,8 +3782,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj": {
-              "projectPath": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj"
+            "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj": {
+              "projectPath": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj"
             }
           }
         }
@@ -3799,6 +3801,10 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[7.0.8, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[7.0.8, )"
           },

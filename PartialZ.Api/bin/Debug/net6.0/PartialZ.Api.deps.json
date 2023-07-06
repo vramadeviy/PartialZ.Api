@@ -9,6 +9,7 @@
       "PartialZ.Api/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "7.0.8",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.8",
           "Newtonsoft.Json": "13.0.3",
           "PartialZ.DataAccess": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
@@ -753,6 +754,7 @@
       "PartialZ.DataAccess/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.8",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.8"
         },
         "runtime": {

@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace PartialZ.DataAccess.PartialZDB;
 
-public partial class PartialZContext : DbContext
+public partial class PartialClaimsContext : DbContext
 {
-    public PartialZContext()
+    public PartialClaimsContext()
     {
     }
 
-    public PartialZContext(DbContextOptions<PartialZContext> options)
+    public PartialClaimsContext(DbContextOptions<PartialClaimsContext> options)
         : base(options)
     {
     }
@@ -24,17 +23,10 @@ public partial class PartialZContext : DbContext
 
     public virtual DbSet<Employer> Employers { get; set; }
 
-
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        base.OnConfiguring(optionsBuilder);
-    }
-    protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
-    {
-        base.ConfigureConventions(configurationBuilder);
-        configurationBuilder.DefaultTypeMapping<Employer>();
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=APPDEVDB19;Initial Catalog=PartialClaims;Persist Security Info=True;TrustServerCertificate=True;User ID=PartialEmp_User;Password=BtFItmFmnX04clyyrIGu");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<EmailTemplate>(entity =>

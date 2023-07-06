@@ -13,11 +13,12 @@ namespace PartialZ.Api.Controllers
         {
             this._employer = employer;
         }
+     
         [HttpPost]
-        public async Task<IActionResult> RegsregisterEmployer(AuthorizationDto authorizationDto)
+        public async Task<AffidavitDto> RegsregisterEmployer(AuthorizationDto authorizationDto)
         {
             var result = await this._employer.RegsregisterEmployer(authorizationDto.Eannumber, authorizationDto.Feinnumber);
-            return Ok(result);
+            return result;
         }
         [HttpPost]
         [Route("AffidavitRegistration")]

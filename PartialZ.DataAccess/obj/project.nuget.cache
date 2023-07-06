@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tKP5ujef2ouI7Tu82exvlemylSjFg9MsiYLtepmZvhG9JGuYWGECgm3fLki7fFPNtpfVQJZJH1dQnEeXRddOcQ==",
+  "dgSpecHash": "Pkj7isSd+MJtLFBIfXwvnOXpXbINwux+ktRa6hZ+HgT40glHIQaTqNyfpLNUuvVB75tKdna9SkZ+S0ZwrncTZg==",
   "success": true,
-  "projectFilePath": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj",
+  "projectFilePath": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramadevi.yekula\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ramadevi.yekula\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

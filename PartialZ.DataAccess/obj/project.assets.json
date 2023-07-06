@@ -3505,6 +3505,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 7.0.8",
+      "Microsoft.EntityFrameworkCore.Relational >= 7.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.8"
     ]
@@ -3516,11 +3517,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj",
+      "projectUniqueName": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj",
       "projectName": "PartialZ.DataAccess",
-      "projectPath": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj",
+      "projectPath": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.DataAccess\\PartialZ.DataAccess.csproj",
       "packagesPath": "C:\\Users\\ramadevi.yekula\\.nuget\\packages\\",
-      "outputPath": "C:\\PartialZ_Azure\\PartialZ.Api\\PartialZ.DataAccess\\obj\\",
+      "outputPath": "C:\\Azure_ADOL\\PartialZ_API\\PartialZ.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3555,6 +3556,10 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.8, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[7.0.8, )"
           },

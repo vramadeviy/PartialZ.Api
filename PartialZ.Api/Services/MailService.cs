@@ -7,7 +7,6 @@ using PartialZ.Api.Dtos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using PartialZ.Api.Enums;
-using Microsoft.AspNetCore.Hosting.Server;
 
 namespace PartialZ.Api.Services
 {
@@ -51,12 +50,11 @@ namespace PartialZ.Api.Services
             SmtpClient smtp = new SmtpClient();
             smtp.Host = this._configuration.GetValue<string>("Mail:Host");
             smtp.UseDefaultCredentials = false;
-            //smtp.EnableSsl = true;
-            //NetworkCredential NetworkCred = new NetworkCredential(this._configuration.GetValue<string>("Mail:Username"), this._configuration.GetValue<string>("Mail:Password"));
+            smtp.EnableSsl = true;
+            NetworkCredential NetworkCred = new NetworkCredential(this._configuration.GetValue<string>("Mail:Username"), this._configuration.GetValue<string>("Mail:Password"));
             //smtp.UseDefaultCredentials = true;
-            //smtp.Credentials = NetworkCred;
+            smtp.Credentials = NetworkCred;
             smtp.Port = Convert.ToInt32(this._configuration.GetValue<string>("Mail:Port"));
-            smtp.Credentials = CredentialCache.DefaultNetworkCredentials;
             try
             {
                 smtp.Send(user);
